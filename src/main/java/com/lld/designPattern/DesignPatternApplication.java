@@ -2,6 +2,7 @@ package com.lld.designPattern;
 
 import com.lld.designPattern.bookmyshow.BookMyShow;
 import com.lld.designPattern.carRentalSystem.RentalSystem;
+import com.lld.designPattern.parkinglot.ParkingLotTest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,7 +13,9 @@ public class DesignPatternApplication {
 		SpringApplication.run(DesignPatternApplication.class, args);
 		//RentalSystem rentalSystem = new RentalSystem();
 
-		BookMyShow bookMyShow = new BookMyShow();
+		//BookMyShow bookMyShow = new BookMyShow();
+
+		ParkingLotTest parkingLotTest = new ParkingLotTest();
 	}
 
 }
