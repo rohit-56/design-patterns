@@ -8,14 +8,17 @@ import java.util.List;
 
 public class DispenseState extends State{
 
-    public DispenseState() {
+    public DispenseState(VendingMachine vendingMachine,int codeNumber) {
         System.out.println("Current state is Dispense State");
+        dispenseProduct(vendingMachine,codeNumber);
     }
 
     @Override
     public Item dispenseProduct(VendingMachine vendingMachine, int codeNumber) {
         Item item = vendingMachine.getInventory().getItem(codeNumber);
         System.out.println("Dispense Item "+item.getItemType());
+        vendingMachine.getInventory().updateItemSoldOut(codeNumber,true);
+        vendingMachine.getInventory().setItem(codeNumber,null);
         return item;
     }
 
