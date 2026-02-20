@@ -26,7 +26,7 @@ public abstract class State {
     }
 
     public Item dispenseProduct(VendingMachine vendingMachine,int codeNumber){
-
+       return null;
     }
 
     public int returnChangeCoin(int returnChangeCoin){

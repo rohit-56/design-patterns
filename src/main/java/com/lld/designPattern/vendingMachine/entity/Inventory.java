@@ -19,6 +19,15 @@ public class Inventory {
 
     }
 
+    public void setItem(int codeNumber, Item item) {
+        for(int i=0;i<inventory.length;i++) {
+            if(inventory[i].getShelfNumber()==codeNumber) {
+                inventory[i].setItem(item);
+                return;
+            }
+        }
+    }
+
     public void addItem(Item item,int codeNumber) {
         for(int i=0;i<inventory.length;i++) {
             if(inventory[i].getShelfNumber()==codeNumber && inventory[i].isSoldOut()==false){

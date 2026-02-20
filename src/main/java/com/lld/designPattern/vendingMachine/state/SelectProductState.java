@@ -29,7 +29,8 @@ public class SelectProductState extends State{
         //check price paid >= price of item selected
         if(amount>=item.getPrice()){
             returnChangeCoin(amount-item.getPrice());
-            vendingMachine.setCurrentState(new DispenseState());
+            vendingMachine.setCurrentState(new DispenseState(vendingMachine,codeNumber));
+            vendingMachine.setCurrentState(new IdleState(vendingMachine));
         }
         else{
             returnChangeCoin(amount);
